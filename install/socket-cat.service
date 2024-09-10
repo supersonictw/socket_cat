@@ -1,0 +1,13 @@
+[Install]
+WantedBy=multi-user.target
+
+[Unit]
+Description=socket-cat
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+User=root
+ExecStart=/usr/local/bin/socket_cat
